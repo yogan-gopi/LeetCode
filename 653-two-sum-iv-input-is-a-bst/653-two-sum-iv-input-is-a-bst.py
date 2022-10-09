@@ -16,7 +16,10 @@ class Solution:
                 return True
             else:
                 self.vis += (node.val, )
-            return dfs(node.left) or dfs(node.right)
-        
+            if dfs(node.left):
+                return True
+            if dfs(node.right):
+                return True
+            return False
         
         return dfs(root)
