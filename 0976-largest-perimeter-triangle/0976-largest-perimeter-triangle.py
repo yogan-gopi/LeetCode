@@ -1,11 +1,5 @@
 class Solution:
     def largestPerimeter(self, nums: List[int]) -> int:
-        def checkTri(a, b, c):
-            if (a + b <= c) or (a + c <= b) or (b + c <= a) :
-                return False
-            else:
-                return True     
-
         
         nums.sort()
         n = len(nums)
