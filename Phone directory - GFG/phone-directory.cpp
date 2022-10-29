@@ -15,17 +15,17 @@ vector<vector<string>> displayContacts(int n, string contact[], string s)
        sort( contact , contact+n ) ;
        vector<vector<string>>v ;
        
-       for( int i = 0 ; i<s.size() ; i++ ) // Traversing the querry s
+       for( int i = 0 ; i<s.size() ; i++ ) 
        {
-           string temp = s.substr( 0 , i+1 ) ; // first temp has g
+           string temp = s.substr( 0 , i+1 ) ;
            set<string>a ;
            
-           for( int j = 0 ; j<n ; j++ )  // For each extra letter eg:- g,ge,gee,geei...
+           for( int j = 0 ; j<n ; j++ ) 
            {
-               string b = contact[j].substr( 0 , i+1 ) ; //
-               if( b == temp ) // temp=g and b=g so all three of them gets inserted in set
+               string b = contact[j].substr( 0 , i+1 ) ; 
+               if( b == temp ) 
                {
-                   a.insert(contact[j]) ;// insert all the one's with same prefix
+                   a.insert(contact[j]) ;
                }
            }
            
